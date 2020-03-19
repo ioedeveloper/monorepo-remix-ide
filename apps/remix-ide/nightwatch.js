@@ -2,9 +2,9 @@
 require('@babel/register')()
 
 module.exports = {
-  'src_folders': ['test-browser/tests'],
+  'src_folders': ['apps/remix-ide/test-browser/tests'],
   'output_folder': 'reports',
-  'custom_commands_path': ['test-browser/commands'],
+  'custom_commands_path': ['apps/remix-ide/test-browser/commands'],
   'custom_assertions_path': '',
   'page_objects_path': '',
   'globals_path': '',

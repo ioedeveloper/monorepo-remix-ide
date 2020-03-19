@@ -3,7 +3,7 @@ var csjs = require('csjs-inject')
 var helper = require('../../lib/helper')
 let globalRegistry = require('../../global/registry')
 const { Plugin } = require('@remixproject/engine')
-import * as packageJson from '../../../package.json'
+import * as packageJson from '../../../../../package.json'
 
 const EventEmitter = require('events')
 

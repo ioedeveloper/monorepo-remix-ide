@@ -17,9 +17,9 @@ var csjs = require('csjs-inject')
 
 var css = require('./styles/terminal-styles')
 import { Plugin } from '@remixproject/engine'
-import * as packageJson from '../../../package.json'
+import * as packageJson from '../../../../../package.json'
 
-var packageV = require('../../../package.json')
+var packageV = require('../../../../../package.json')
 
 var KONSOLES = []
 

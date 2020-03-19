@@ -5,7 +5,7 @@ var copyToClipboard = require('../ui/copy-to-clipboard')
 var EventManager = require('../../lib/events')
 var css = require('./styles/settings-tab-styles')
 import { ViewPlugin } from '@remixproject/engine'
-import * as packageJson from '../../../package.json'
+import * as packageJson from '../../../../../package.json'
 
 const profile = {
   name: 'settings',

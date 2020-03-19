@@ -20,7 +20,7 @@ const CompileTabLogic = require('./compileTab/compileTab.js')
 const CompilerContainer = require('./compileTab/compilerContainer.js')
 
 import { ViewPlugin } from '@remixproject/engine'
-import * as packageJson from '../../../package.json'
+import * as packageJson from '../../../../../package.json'
 
 const profile = {
   name: 'solidity',

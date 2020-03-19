@@ -1,0 +1,1 @@
+console.error("Error: Cannot find module '/home/ioedeveloper/repos/monorepo-remix-ide/src/index.js' from '/home/ioedeveloper/repos/monorepo-remix-ide'");
