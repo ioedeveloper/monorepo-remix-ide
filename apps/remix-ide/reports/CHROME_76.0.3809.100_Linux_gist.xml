@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="gist"
+    errors="0" failures="1" hostname="" id="" package="gist" skipped="0"
+    tests="1" time="2.913" timestamp="Wed, 15 Jan 2020 15:59:06 GMT">
+  
+    <testcase name="UploadToGists" classname="gist" time="2.913" assertions="4">
+
+    
+
+    
+
+      <failure message="Failed [fail]: ()">    at callback (/home/ioedeveloper/repos/remix-ide/test-browser/tests/gist.js:31:24)
+    at Object.&lt;anonymous&gt; (/home/ioedeveloper/repos/remix-ide/test-browser/commands/getModalBody.js:8:7)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

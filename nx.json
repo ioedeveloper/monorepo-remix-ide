@@ -10,5 +10,13 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "remix-ide": {
+      "tags": []
+    },
+    "remix-ide-e2e": {
+      "tags": [],
+      "implicitDependencies": ["remix-ide"]
+    }
+  }
 }

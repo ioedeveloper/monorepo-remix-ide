@@ -1,8 +1,86 @@
 {
   "version": 1,
-  "projects": {},
+  "projects": {
+    "remix-ide": {
+      "root": "apps/remix-ide",
+      "sourceRoot": "apps/remix-ide/src",
+      "projectType": "application",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              {
+              "command": "browserify apps/remix-ide/src/index.js -o build/app.js --exclude solc"
+              }
+          ]
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/workspace:run-command",
+          "options": {
+            "commands": [
+              {
+                "command": "npm-run-all -lpr serve watch onchange remixd"
+              }
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/workspace:run-command",
+          "options": {
+            "commands": [
+              {
+                "command": "standard | notify-error"
+              }
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/workspace:run-command",
+          "options": {
+            "commands": [
+              {
+                "command": "csslint && standard && node test/index.js"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "remix-ide-e2e": {
+      "root": "apps/remix-ide-e2e",
+      "sourceRoot": "apps/remix-ide-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/remix-ide-e2e/cypress.json",
+            "tsConfig": "apps/remix-ide-e2e/tsconfig.e2e.json",
+            "devServerTarget": "remix-ide:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "remix-ide:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "apps/remix-ide-e2e/.eslintrc",
+            "tsConfig": ["apps/remix-ide-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/remix-ide-e2e/**"]
+          }
+        }
+      }
+    }
+  },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/web"
   },
   "schematics": {
     "@nrwl/workspace": {
@@ -59,5 +137,6 @@
         "linter": "eslint"
       }
     }
-  }
+  },
+  "defaultProject": "remix-ide"
 }
